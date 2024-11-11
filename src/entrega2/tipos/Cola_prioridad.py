@@ -12,7 +12,7 @@ E = TypeVar('E')
 P = TypeVar('P')
 
 
-class Cola_priodidad(Agregado_lineal[E]):
+class Cola_prioridad(Agregado_lineal[E]):
     
     def __init__(self):
         super().__init__()
@@ -20,8 +20,8 @@ class Cola_priodidad(Agregado_lineal[E]):
         
         
     @staticmethod 
-    def of() -> Cola_priodidad[E, P]:
-        return Cola_priodidad()
+    def of() -> Cola_prioridad[E, P]:
+        return Cola_prioridad()
     
     
     @property
