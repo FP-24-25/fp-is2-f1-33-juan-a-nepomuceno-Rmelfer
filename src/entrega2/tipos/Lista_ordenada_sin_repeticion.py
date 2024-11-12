@@ -38,7 +38,7 @@ class Lista_ordenada_sin_repeticion(Agregado_lineal[E]):
     def add(self, e:E) -> None:
         if e not in self._elements:
             index = self.__index_order(e)
-            self.__elements.insert(index, e)
+            self._elements.insert(index, e)
     
     
     def __str__(self) -> str:

@@ -3,8 +3,8 @@ Created on 10 nov 2024
 
 @author: raulmelgarfernandez
 '''
+from entrega2.tipos.Cola_prioridad import Cola_prioridad
 
-from entrega2.tipos.Cola_prioridad import *
 
 
 
@@ -15,10 +15,10 @@ def test_cola_prioridad():
     cola.add('Paciente B', 2)
     cola.add('Paciente C', 1)
     
-    assert cola.elements()==['Paciente C', 'Paciente B', 'Paciente A'], "El orden de la cola es incorrecto"
+    assert cola.elements==['Paciente C', 'Paciente B', 'Paciente A'], "El orden de la cola es incorrecto"
     
     atencion = []
-    while not cola.is_empty():
+    while not cola.is_empty:
         atencion.append(cola.remove())
     
     assert atencion == ["Paciente C", "Paciente B", "Paciente A"], "El orden de atencion no es correcto"
