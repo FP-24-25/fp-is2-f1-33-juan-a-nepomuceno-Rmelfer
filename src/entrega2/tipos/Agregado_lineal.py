@@ -6,7 +6,7 @@ Created on 10 nov 2024
 
 
 from __future__ import annotations
-from typing import List, TypeVar, Generic
+from typing import List, TypeVar, Generic, Callable
 from abc import ABC, abstractmethod
 
 
@@ -15,6 +15,7 @@ E = TypeVar('E')
 
 
 class Agregado_lineal(ABC, Generic[E]):
+    
     def __init__(self):
         self._elements: List[E] = []
     
@@ -55,6 +56,17 @@ class Agregado_lineal(ABC, Generic[E]):
 
 
 
-
+    ############## MODIFICACIONES DEFENSA 2 ##############
+    @abstractmethod 
+    def contains(self, e: E) -> bool:
+        return e in self._elements
+    
+    
+    def find(self, func: Callable[[E], bool]) -> E | None:
+        for element in self._elements:
+            if func(element):  # Verifica si se cumple la condicion en cada elemento.
+                return element
+        return None  # Devuelve None en caso de q ninguno la cumpla.
+    #####################################################
 
 
